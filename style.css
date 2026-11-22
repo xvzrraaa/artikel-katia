@@ -1,0 +1,470 @@
+/* Reset & Variabel Warna */
+:root {
+    --primary: #991b1b;       /* Merah Marun Nusantara */
+    --primary-light: #fef2f2;
+    --primary-dark: #7f1d1d;
+    --secondary: #1e293b;     /* Slate Gelap */
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --accent-gold: #b45309;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Merriweather', Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header & Navigasi */
+.site-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-univ {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.course-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Kontainer Artikel */
+.main-layout {
+    padding-top: 40px;
+    padding-bottom: 64px;
+}
+
+.article-content {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 48px 56px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+/* Header Artikel */
+.article-header {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.tag-kelompok {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.article-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    line-height: 1.35;
+    color: var(--secondary);
+    margin-bottom: 24px;
+}
+
+.author-box {
+    background-color: var(--bg-body);
+    border-left: 4px solid var(--primary);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.author-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.author-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-weight: 600;
+    color: var(--secondary);
+    font-size: 0.92rem;
+}
+
+.author-list li::before {
+    content: "• ";
+    color: var(--primary);
+}
+
+/* Paragraf Pembuka */
+.article-lead {
+    font-size: 1.06rem;
+    color: #1e293b;
+    margin-bottom: 36px;
+}
+
+.article-lead p {
+    margin-bottom: 16px;
+}
+
+/* Section & Tipografi */
+.article-section {
+    margin-bottom: 42px;
+    scroll-margin-top: 80px;
+}
+
+.article-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    color: var(--secondary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-light);
+    position: relative;
+}
+
+.article-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 64px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.sub-section-title {
+    margin-top: 36px;
+}
+
+.article-section p {
+    margin-bottom: 16px;
+}
+
+/* Grid Pengertian */
+.definition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.def-card {
+    padding: 22px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.def-hak {
+    background-color: #fffafa;
+    border-top: 4px solid var(--primary);
+}
+
+.def-kewajiban {
+    background-color: #f8fafc;
+    border-top: 4px solid var(--secondary);
+}
+
+.def-card h3 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.def-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Daftar Dasar Hukum */
+.law-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.law-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 18px;
+    background-color: var(--bg-body);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.pasal-badge {
+    background-color: var(--secondary);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+.law-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Kartu Macam-Macam Hak */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.info-card {
+    background-color: var(--bg-body);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.info-card h4 {
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+}
+
+/* List Kewajiban */
+.styled-list {
+    list-style: none;
+    margin: 16px 0;
+}
+
+.styled-list li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+}
+
+.styled-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Tabel Penerapan */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.comparison-table thead {
+    background-color: var(--secondary);
+    color: #ffffff;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: var(--bg-body);
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Blockquote */
+.highlight-quote {
+    margin: 28px 0;
+    padding: 24px 28px;
+    background-color: var(--primary-light);
+    border-left: 5px solid var(--primary);
+    border-radius: 0 10px 10px 0;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--primary-dark);
+}
+
+/* Kesimpulan */
+.conclusion-box {
+    background-color: #f8fafc;
+    padding: 28px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+/* Referensi */
+.references-section {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.references-section h3 {
+    font-size: 1.05rem;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+.references-section ol {
+    padding-left: 20px;
+}
+
+.references-section li {
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.references-section a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.references-section a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--secondary);
+    color: #e2e8f0;
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.9rem;
+}
+
+.footer-sub {
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: #94a3b8;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .article-content {
+        padding: 28px 22px;
+    }
+
+    .article-title {
+        font-size: 1.55rem;
+    }
+
+    .definition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .law-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
